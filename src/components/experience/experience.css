@@ -1,0 +1,25 @@
+.experience-container {
+  padding: 20px;
+  scroll-snap-align: start;
+  min-height: 100vh;
+  /* background-color: aqua; */
+}
+.experience-container h1 {
+  /* background-color: rgb(0, 0, 67); */
+  width: 100%;
+  text-align: center;
+  padding: 40px 10px;
+  color: gray;
+}
+
+@media screen and (max-width: 768px) {
+  .experience-container {
+    padding: 20px 0;
+  }
+
+  .experience-container h1 {
+    font-size: 2em;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+}
