@@ -5,7 +5,6 @@ import Projects from "./components/projects/projects";
 import Contact from "./components/contact/contact";
 import Navbar from "./components/navbar/navbar";
 import Experience from "./components/experience/experience";
-import Footer from "./components/footer/footer";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
