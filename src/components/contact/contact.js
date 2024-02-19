@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
-import Card from "../cryptonet_assign/card";
 
 const Contact = () => {
   const form = useRef();
