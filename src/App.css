@@ -8,3 +8,16 @@
   z-index: -1;
   position: absolute;
 }
+
+.loading-container {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loading-container h2 {
+  color: gray;
+}
