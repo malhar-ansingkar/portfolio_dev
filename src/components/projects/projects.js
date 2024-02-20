@@ -22,7 +22,7 @@ const Projects = () => {
       title: "Beach Resort",
       img: beachResort,
       description:
-        "A room catalogue with filter options designed for a resort to display the available options",
+        "A Resort catalogue with filter options designed for a resort to display the available options",
       technologies: "React.js | JS | HTML5 | CSS3 | Netlify | Contentful(CMS)",
       demo: "https://beach-resort-by-malhar.netlify.app/rooms",
       github: "https://github.com/malhar-ansingkar/beach-resort",
