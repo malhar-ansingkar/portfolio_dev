@@ -15,10 +15,9 @@ function App() {
 
   // this should be run only once per application lifetime
   useEffect(() => {
+    setTimeout(() => setInit(true), 3000);
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
     });
   }, []);
 
@@ -36,89 +35,87 @@ function App() {
           <Experience />
           <Projects />
           <Contact />
-          {init && (
-            <Particles
-              id="tsparticles"
-              particlesLoaded={particlesLoaded}
-              options={{
-                background: {
-                  color: {
-                    value: "#ffffff",
+          <Particles
+            id="tsparticles"
+            particlesLoaded={particlesLoaded}
+            options={{
+              background: {
+                color: {
+                  value: "#ffffff",
+                },
+              },
+              fpsLimit: 120,
+              particles: {
+                number: {
+                  value: 190,
+                  density: {
+                    enable: true,
+                    value_area: 700,
                   },
                 },
-                fpsLimit: 120,
-                particles: {
-                  number: {
-                    value: 190,
-                    density: {
-                      enable: true,
-                      value_area: 700,
-                    },
-                  },
-                  color: {
-                    value: "#000000",
-                  },
-                  shape: {
-                    type: "triangle",
-                    stroke: {
-                      width: 0,
-                      color: "#000000",
-                    },
-                    polygon: {
-                      nb_sides: 5,
-                    },
-                    image: {
-                      src: "img/github.svg",
-                      width: 100,
-                      height: 100,
-                    },
-                  },
-                  opacity: {
-                    value: 0.5,
-                    random: false,
-                    anim: {
-                      enable: false,
-                      speed: 1,
-                      opacity_min: 0.1,
-                      sync: false,
-                    },
-                  },
-                  size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                      enable: false,
-                      speed: 40,
-                      size_min: 0.1,
-                      sync: false,
-                    },
-                  },
-                  links: {
-                    enable: true,
-                    distance: 130,
+                color: {
+                  value: "#000000",
+                },
+                shape: {
+                  type: "triangle",
+                  stroke: {
+                    width: 0,
                     color: "#000000",
-                    opacity: 0.7,
-                    width: 1,
                   },
-                  move: {
-                    enable: true,
-                    speed: 3,
-                    direction: "none",
-                    random: false,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                      enable: false,
-                      rotateX: 600,
-                      rotateY: 1200,
-                    },
+                  polygon: {
+                    nb_sides: 5,
                   },
-                  detectRetina: true,
+                  image: {
+                    src: "img/github.svg",
+                    width: 100,
+                    height: 100,
+                  },
                 },
-              }}
-            />
-          )}
+                opacity: {
+                  value: 0.5,
+                  random: false,
+                  anim: {
+                    enable: false,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false,
+                  },
+                },
+                size: {
+                  value: 3,
+                  random: true,
+                  anim: {
+                    enable: false,
+                    speed: 40,
+                    size_min: 0.1,
+                    sync: false,
+                  },
+                },
+                links: {
+                  enable: true,
+                  distance: 130,
+                  color: "#000000",
+                  opacity: 0.7,
+                  width: 1,
+                },
+                move: {
+                  enable: true,
+                  speed: 3,
+                  direction: "none",
+                  random: false,
+                  straight: false,
+                  out_mode: "out",
+                  bounce: false,
+                  attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200,
+                  },
+                },
+                detectRetina: true,
+              },
+            }}
+          />
         </div>
       ) : (
         <div className="loading-container">
